@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "296468d6e15db4d91345"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d01b31f9657bc6099f52"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -36441,7 +36441,7 @@
 	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.Story = undefined;
 	
@@ -36461,79 +36461,114 @@
 	
 	var _reactTransformHmr4 = _interopRequireDefault(_reactTransformHmr3);
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var _components = {
-	    _component: {}
+	  Story: {
+	    displayName: 'Story'
+	  }
 	};
 	
 	var _reactTransformHmr2 = (0, _reactTransformHmr4.default)({
-	    filename: '/home/pont/projects/scroller/src/scroller/client/components/Story.jsx',
-	    components: _components,
-	    locals: [module],
-	    imports: [_react3.default]
+	  filename: '/home/pont/projects/scroller/src/scroller/client/components/Story.jsx',
+	  components: _components,
+	  locals: [module],
+	  imports: [_react3.default]
 	});
 	
 	var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-	    filename: '/home/pont/projects/scroller/src/scroller/client/components/Story.jsx',
-	    components: _components,
-	    locals: [],
-	    imports: [_react3.default, _redboxReact3.default]
+	  filename: '/home/pont/projects/scroller/src/scroller/client/components/Story.jsx',
+	  components: _components,
+	  locals: [],
+	  imports: [_react3.default, _redboxReact3.default]
 	});
 	
 	function _wrapComponent(id) {
-	    return function (Component) {
-	        return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
-	    };
+	  return function (Component) {
+	    return _reactTransformHmr2(_reactTransformCatchErrors2(Component, id), id);
+	  };
 	}
 	
-	var Story = exports.Story = _wrapComponent('_component')(_react3.default.createClass({
-	    displayName: 'Story',
+	// export const Story = React.createClass({
+	//     getInitialState: function() {
+	//         return {scrollY: 0};
+	//     },
+	//     handleScroll: () => {
+	//         console.log('hello', window.scrollY)
+	//         this.setState({
+	//             scrollY:0
+	//         })
+	//     },
+	//     componentDidMount: () => {
+	//         window.addEventListener('scroll', this.handleScroll);
+	//     },
+	//     render() {
+	//         var style = {
+	//             height: this.props.height
+	//         }
+	//         return <div style={style}>Hello {this.state.scrollY}</div>;
+	//     } 
+	// });
 	
-	    handleScroll: function handleScroll() {
-	        console.log('hello', window.scrollX);
-	        undefined.setState({
-	            scrollX: 0
-	        });
-	    },
-	    componentDidMount: function componentDidMount() {
-	        window.addEventListener('scroll', undefined.handleScroll);
-	    },
-	    render: function render() {
-	        return _react3.default.createElement(
-	            'div',
-	            { style: this.style },
-	            'Hello ',
-	            this.state.scrollX
-	        );
+	var Story = exports.Story = _wrapComponent('Story')(function (_React$Component) {
+	  _inherits(Story, _React$Component);
+	
+	  function Story(props) {
+	    _classCallCheck(this, Story);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Story).call(this, props));
+	
+	    _this.state = { scrollY: 0 };
+	    _this.handleScroll = _this.handleScroll.bind(_this);
+	    console.log(props);
+	    return _this;
+	  }
+	
+	  _createClass(Story, [{
+	    key: 'handleScroll',
+	    value: function handleScroll() {
+	      console.log(window.scrollY);
+	      this.setState({
+	        scrollY: window.scrollY
+	      });
 	    }
-	}));
-	// export class Story extends React.Component {
-	//   constructor(props) {
-	//     super(props);
-	//     this.state={};
-	//     console.log(props);
-
-	//     this.setState({
-	//         scrollX:0,
-	//         props: props
-	//     })
-	//     this.style = {
-	//         height: props.height
-	//     }
-	//   }
-	//   handleScroll(){
-	//     this.setState({
-	//           scrollX:window.scrollX
-	//     });
-	//   }
-	//   componentDidMount(){
-	//       window.addEventListener('scroll', this.handleScroll);
-	//   }
-	//   render() {
-	//     return <div style={this.style} >Hello {this.state.scrollX}</div>;
-	//   }
-	// }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var style = {
+	        height: this.props.height
+	      };
+	      var fixedStyle = {
+	        position: 'fixed'
+	      };
+	      return _react3.default.createElement(
+	        'div',
+	        { style: style },
+	        _react3.default.createElement(
+	          'div',
+	          { style: fixedStyle },
+	          ' Hello ',
+	          this.state.scrollY
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Story;
+	}(_react3.default.Component));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ },
