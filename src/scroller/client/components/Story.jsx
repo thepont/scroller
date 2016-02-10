@@ -1,29 +1,51 @@
 import React from 'react';
+
+// export const Story = React.createClass({
+//     getInitialState: function() {
+//         return {scrollY: 0};
+//     },
+//     handleScroll: () => {
+//         console.log('hello', window.scrollY)
+//         this.setState({
+//             scrollY:0
+//         })
+//     },
+//     componentDidMount: () => {
+//         window.addEventListener('scroll', this.handleScroll);
+//     },
+//     render() {
+//         var style = {
+//             height: this.props.height
+//         }
+//         return <div style={style}>Hello {this.state.scrollY}</div>;
+//     }  
+// });
 export class Story extends React.Component {
   constructor(props) {
     super(props);
-    
-    //console.log(props);
-    //
-    this.state = {
-        scrollX:0,
-        props: props
-    }
-    var style = {
-        height: props.height
-    }
+    this.state={scrollY:0};
+    this.handleScroll = this.handleScroll.bind(this)
+    console.log(props);
   }
   handleScroll(){
-    var node = this.getDOMNode();
-    this.state = {
-          ... this.state,
-          scrollX:node.scrollTop
-    };
+    console.log(window.scrollY);
+    this.setState({
+          scrollY:window.scrollY
+    });
   }
   componentDidMount(){
       window.addEventListener('scroll', this.handleScroll);
   }
   render() {
-    return <div style={height: height} >Hello {this.state.scrollX}</div>;
+    var style = {
+        height: this.props.height
+    }
+    var fixedStyle = {
+        position: 'fixed'
+    }
+    return (
+    <div style={style} >
+        <div style={fixedStyle}> Hello {this.state.scrollY}</div>
+    </div>)
   }
 }
