@@ -45,11 +45,10 @@ export class Story extends React.Component {
     var fixedStyle = {
         position: 'fixed'
     }
-    return (
-    <div style={style} >
-            <div style={fixedStyle}> Hello {this.state.scrollY}
-                <ScrollLayer step={10}/>
-            </div>        
-    </div>)
+    return <div style={style} >
+                <div style={fixedStyle}> Hello {this.state.scrollY}
+                    <ScrollLayer step={10}/>
+                </div>        
+        </div>
   }
 }
