@@ -48,8 +48,8 @@ export class Story extends React.Component {
     return (
     <div style={style} >
             <div style={fixedStyle}> Hello {this.state.scrollY}
-            <ScrollLayer step={10}/>
-        </div>        
+                <ScrollLayer step={10}/>
+            </div>        
     </div>)
   }
 }
