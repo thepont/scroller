@@ -18,7 +18,7 @@ export class ScrollLayer extends React.Component {
   render() {
     
     var style = {
-        transform: `translate3d(${this.state.translation},0,0)`
+        transform: `translate3d(${this.state.translation}px,0px,0px)`
     };
     console.log('render', style)
     return (
