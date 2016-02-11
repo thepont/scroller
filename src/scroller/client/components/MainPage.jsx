@@ -1,5 +1,6 @@
 import React from 'react';
+import {Story} from './Story';
 
 export default (props) => {
-    return <div>Main Page</div>
+    return <Story height={100000}/>
 }

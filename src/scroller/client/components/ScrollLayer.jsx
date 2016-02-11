@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 export class ScrollLayer extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,8 @@ export class ScrollLayer extends React.Component {
   }
 //   componentDidMount(){
 //       window.addEventListener('scroll', this.handleScroll);
-//   }
+//   }(
+  
   render() {
     var translateX = this.calculateX();
     console.log('x:', translateX, 'image', this.props.image)
@@ -25,11 +26,10 @@ export class ScrollLayer extends React.Component {
         zIndex: this.props.zIndex,
         top: '0px',
         left: '0px',
-        position: 'absolute'
+        position: 'absolute',
+       // transition: '10ms'
     };
     return (
-    <div style={style} >
-        TEST {style.transform}
-    </div>)
+    <div style={style}/>)
   }
 }

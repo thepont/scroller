@@ -11,11 +11,13 @@ import clientStyles from 'scroller/client/sass/styles.scss';
 var appElement = document.getElementById('scroller');
 var history = createBrowserHistory();
 
+import Story from './components/Story'; 
+
 function renderDevtools() {
-    if (process.env.NODE_ENV === 'development') {
-        var Devtools = require('scroller/client/devtools');
-        return <Devtools store={store} />;
-    } 
+    // if (process.env.NODE_ENV === 'development') {
+    //     var Devtools = require('scroller/client/devtools');
+    //     return <Devtools store={store} />;
+    // } 
 }
 
 //
