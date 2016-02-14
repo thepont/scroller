@@ -44,7 +44,7 @@ export class ScrollLayer extends React.Component {
         top: '0px',
         left: '0px',
         position: 'absolute',
-        transition: 'transform 4000ms, opacity 400ms',
+        transition: 'transform 6s, opacity 400ms',
         opacity: visible
     };
     return (
