@@ -43,7 +43,7 @@ const PageDetails = {
         locationX: 10300,
         previous: '/story/grenoble',
         next: '/story/duck2',
-        text: 'Monsanto corp genetically engeered a her an elephant sized duck,'
+        text: 'Monsanto corp genetically engineered a her an elephant sized duck,'
     },
     duck2: {
         locationX: 12000,
