@@ -61,7 +61,7 @@ const PageDetails = {
         locationX: 14500,
         previous: '/story/melbourne',
         next: '/story/end1',
-        text: 'And drove cross country, befrended a wallaby named hoppy'
+        text: 'And drove cross country, befriended a wallaby named hoppy'
     },
     end1: {
         locationX: 15000,
