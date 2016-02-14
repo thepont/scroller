@@ -21,7 +21,6 @@ export class ScrollLayer extends React.Component {
       var {startX} = this.props;
       var {stopX} = this.props;
       var {currentScroll} = this.props;
-      console.log(startX, stopX, currentScroll,(startX <= currentScroll), (stopX >= currentScroll ))
       return (startX <= currentScroll && stopX >= currentScroll ) ? 1 : 0;
   }
   
