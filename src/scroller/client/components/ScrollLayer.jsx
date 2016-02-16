@@ -31,9 +31,8 @@ export class ScrollLayer extends React.Component {
     var height = this.props.height || 516;
     
     
-    var visible = this.calculateVisible()
+    var visible = this.calculateVisible();
     
-    console.log('x:', translateX, 'image', this.props.image)
     var style = {
         transform: `translate3d(${translateX}px,0px,0px)`,
         backgroundImage:  `url("${this.props.image}")`,
