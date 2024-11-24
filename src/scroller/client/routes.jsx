@@ -1,16 +1,17 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Routes, Route } from "react-router-dom";
 
-import AppHandler from 'scroller/client/components/AppHandler';
-import ErrorHandler from 'scroller/client/components/ErrorHandler';
-import MainPage from 'scroller/client/components/MainPage';
-import StoryPage from 'scroller/client/components/StoryPage'
+import AppHandler from './components/AppHandler';
+import MainPage from './components/MainPage';
+import StoryPage from './components/StoryPage'
 
 var routes = (
-    <Route component={AppHandler} path="/">
-        <IndexRoute component={MainPage} />
-        <Route path="story/:id" component={StoryPage} />
-    </Route>
-);
+    <Routes>
+        <Route path="/" element={<AppHandler />}>
+            <Route index element={<MainPage />} />
+            <Route path="about" element={<StoryPage />} />
+        </Route>
+    </Routes>
+)
 
 module.exports = routes;
