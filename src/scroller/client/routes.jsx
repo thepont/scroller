@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import AppHandler from './components/AppHandler';
 import MainPage from './components/MainPage';
