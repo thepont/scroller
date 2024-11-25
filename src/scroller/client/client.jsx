@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router} from 'react-router';
+import {BrowserRouter} from 'react-router-dom';
 
 import Routes from './routes';
 var appElement = document.getElementById('scroller');
@@ -8,10 +8,10 @@ var appElement = document.getElementById('scroller');
 
 // Render Town
 //
-ReactDOM.render((
+ReactDOM.createRoot(appElement).render(
     <div>
-        <Router>
+        <BrowserRouter>
             <Routes/>
-        </Router>
+        </BrowserRouter>
     </div>
-), appElement);
+);
