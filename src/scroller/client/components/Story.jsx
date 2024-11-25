@@ -10,7 +10,7 @@ const PageDetails = {
     tallouse: {
         locationX: 1,
         next: '/story/grenoble',
-        text: 'Marie lived in Tallouse, She fed on cheese and wine,'
+        text: 'Marie lived in Toulouse, She fed on cheese and wine,'
     },
     grenoble: {
         locationX: 9600,
@@ -51,7 +51,7 @@ const PageDetails = {
     end2: {
         locationX: 16001,
         previous: '/story/end1',
-        text: 'And she hang around with coding Paul, Je t\'amie he said to her.'
+        text: 'And she hang around with coding Paul, Je t\'aime he said to her.'
     }
 }
 
