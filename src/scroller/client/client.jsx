@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 
-import Routes from './routes';
+import ScrollerRoutes from './routes';
 var appElement = document.getElementById('scroller');
 
 
@@ -11,7 +11,7 @@ var appElement = document.getElementById('scroller');
 ReactDOM.createRoot(appElement).render(
     <div>
         <BrowserRouter>
-            <Routes/>
+            <ScrollerRoutes/>
         </BrowserRouter>
     </div>
 );
