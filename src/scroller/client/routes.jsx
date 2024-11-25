@@ -5,7 +5,7 @@ import AppHandler from './components/AppHandler';
 import MainPage from './components/MainPage';
 import StoryPage from './components/StoryPage'
 
-var Routes = (
+var ScrollerRoutes = (
     <Routes>
         <Route path="/" element={<AppHandler />}>
             <Route index element={<MainPage />} />
@@ -14,4 +14,4 @@ var Routes = (
     </Routes>
 )
 
-module.exports = Routes;
+module.exports = ScrollerRoutes;
